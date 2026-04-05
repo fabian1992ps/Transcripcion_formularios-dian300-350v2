@@ -57,7 +57,18 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("### Selecciona el módulo de extracción:")
+st.markdown("""
+<div style="background: rgba(99, 102, 241, 0.05); padding: 2rem; border-radius: 12px; margin-bottom: 2.5rem; border-left: 4px solid #60a5fa;">
+    <h3 style="margin-top: 0;">💡 ¿Cómo funciona?</h3>
+    <ol style="color: #cbd5e1; font-size: 1.1rem; line-height: 1.8; margin-bottom: 0;">
+        <li><strong>Selecciona tu formulario:</strong> Haz clic en el panel inferior o en la barra lateral para abrir el módulo del Formulario 300 o 350.</li>
+        <li><strong>Carga tus archivos:</strong> Arrastra y suelta todos los PDFs de tus declaraciones. El algoritmo leerá inteligentemente los meses y extraerá casilla por casilla.</li>
+        <li><strong>Descarga y consolida:</strong> Revisa la consistencia de los datos en pantalla y pulsa "Descargar Excel" para obtener una sábana financiera con todos tus periodos.</li>
+    </ol>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("### 📌 Selecciona el módulo de extracción:")
 st.markdown("<br>", unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
@@ -91,4 +102,13 @@ with col2:
         st.info("👈 Selecciona '2 Formulario 350' en el menú lateral de la izquierda")
 
 st.markdown("<br><br><br><hr>", unsafe_allow_html=True)
+st.markdown("### 📈 Ejemplo del Entregable")
+st.markdown("<p style='color:#cbd5e1'>Al procesar tus archivos con éxito, la plataforma generará automáticamente un documento <strong>Excel Profesional</strong> listo para su análisis financiero, estructurado visualmente como el siguiente ejemplo:</p>", unsafe_allow_html=True)
+
+try:
+    st.image("assets/excel_example.png", use_container_width=True)
+except Exception:
+    pass
+
+st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown("<center><small>Desarrollado para agilizar la gestión tributaria y auditoría contable.</small></center>", unsafe_allow_html=True)
